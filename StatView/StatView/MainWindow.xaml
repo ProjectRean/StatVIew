@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ViewStat" Height="409.493" Width="463.313" FontWeight="Bold" ShowActivated="False">
+    <Grid Height="379" VerticalAlignment="Bottom">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA49797"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="33*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox Content="고유 아이디를 사용하지 않기 (권장하지 않음)" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Height="16" Width="271"/>
+        <CheckBox Content="기본 API 주소 사용하기" HorizontalAlignment="Left" Margin="10,299,0,0" VerticalAlignment="Top" Height="16" Width="271" IsChecked="True" Unchecked="CheckBox_unusedAPI" Checked="CheckBox_UsingAPI"/>
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="72,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="198"/>
+        <Label Content="사용자명" HorizontalAlignment="Left" Height="26" Margin="10,271,0,0" VerticalAlignment="Top" Width="57"/>
+        <CheckBox Content="기본 스킨 사용하기" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="271" Height="16"/>
+        <Button Content="검색" HorizontalAlignment="Left" Height="42" Margin="24,263,0,0" VerticalAlignment="Top" Width="121" Grid.Column="1" RenderTransformOrigin="0.529,1.238" Click="Execute_Button_Click"/>
+        <Button Content="초기화" HorizontalAlignment="Left" Height="42" Margin="24,315,0,0" VerticalAlignment="Top" Width="121" Grid.Column="1" RenderTransformOrigin="0.529,1.238" Click="Reset_Button_Click"/>
+        <Grid Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="230" Margin="10,13,0,0" VerticalAlignment="Top" Width="435">
+            <Border BorderBrush="black" BorderThickness="1" CornerRadius="4" Margin="0,6,10,-6">
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
